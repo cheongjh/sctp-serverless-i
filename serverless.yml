@@ -1,4 +1,4 @@
-service: aws-node-http-api-project-leon
+service: sctp-serverless-i-leon
 frameworkVersion: '3'
 
 provider:
@@ -12,3 +12,12 @@ functions:
       - httpApi:
           path: /
           method: get
+  apipost:
+    handler: index.handlerpost
+    events:
+      - httpApi:
+          path: /
+          method: post
+
+plugins:
+  - serverless-offline

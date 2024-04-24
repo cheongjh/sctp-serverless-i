@@ -11,3 +11,17 @@ module.exports.handler = async (event) => {
     ),
   };
 };
+
+module.exports.handlerpost = async (event) => {
+    return {
+      statusCode: 200,
+      body: JSON.stringify(
+        {
+          message: "This is POST function/method",
+          input: event,
+        },
+        null,
+        2
+      ),
+    };
+  };

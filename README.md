@@ -2,4 +2,7 @@
 
 ## Commands
 `serverless deploy`
+
 `serverless remove`
+
+`serverless offline`

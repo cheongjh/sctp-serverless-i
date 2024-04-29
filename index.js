@@ -1,5 +1,6 @@
 module.exports.handler = async (event) => {
-  console.log(event)
+  console.log("Cheong")
+  console.log(event) // required to see logs in cloudwatch
   return {
     statusCode: 200,
     body: JSON.stringify(

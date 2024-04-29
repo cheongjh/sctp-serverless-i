@@ -4,6 +4,8 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs18.x
+  deploymentBucket:
+    name: cohort5.deployment
 
 functions:
   api:
@@ -12,6 +14,9 @@ functions:
       - httpApi:
           path: /
           method: get
+      - sqs:
+          # arn: arn:aws:sqs:us-east-1:255945442255:<CHANGE-TO-YOUR-QUEUE>
+          arn: arn:aws:sqs:us-east-1:255945442255:leon-sqs
   apipost:
     handler: index.handlerpost
     events:

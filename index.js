@@ -15,7 +15,8 @@ module.exports.handler = async (event) => {
 };
 
 module.exports.handlerpost = async (event) => {
-    // console.log(event)
+    console.log("Cheong")
+    console.log(event)
     return {
       statusCode: 200,
       body: JSON.stringify(

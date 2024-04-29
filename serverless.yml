@@ -23,6 +23,18 @@ functions:
       - httpApi:
           path: /
           method: post
+      - sqs:
+          arn:
+            Fn::GetAtt:
+              - LeonQueue2
+              - Arn
+
+resources:
+  Resources:
+    LeonQueue2:
+      Type: "AWS::SQS::Queue"
+      Properties:
+        QueueName: "leon-queue-2"
 
 plugins:
   - serverless-offline
